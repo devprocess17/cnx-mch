@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,153 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cnx-green: #4ade80;
-            --cnx-dark-green: #22c55e;
-            --cnx-light-green: #86efac;
-            --cnx-gray: #6b7280;
-            --cnx-dark-gray: #374151;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .cnx-green { color: var(--cnx-green); }
-        .bg-cnx-green { background-color: var(--cnx-green); }
-        .bg-cnx-dark-green { background-color: var(--cnx-dark-green); }
-        .border-cnx-green { border-color: var(--cnx-green); }
-        
-        .step-content {
-            display: none;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .step-content.active {
-            display: block;
-            opacity: 1;
-        }
-        
-        .step-button {
-            transition: all 0.3s ease;
-            border: 2px solid #e5e7eb;
-        }
-        
-        .step-button.active {
-            background-color: var(--cnx-green);
-            color: white;
-            border-color: var(--cnx-green);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(74, 222, 128, 0.3);
-        }
-        
-        .module-circle {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .module-circle:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .central-circle {
-            background: linear-gradient(135deg, var(--cnx-green), var(--cnx-dark-green));
-            z-index: 10;
-        }
-        
-        .module-description {
-            display: none;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .module-description.active {
-            display: block;
-            opacity: 1;
-        }
-        
-        .chatbot {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-        }
-        
-        .chatbot-bubble {
-            background: linear-gradient(135deg, var(--cnx-green), var(--cnx-dark-green));
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(74, 222, 128, 0.4);
-            transition: all 0.3s ease;
-        }
-        
-        .chatbot-bubble:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(74, 222, 128, 0.6);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--cnx-green), var(--cnx-dark-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--cnx-green), var(--cnx-dark-green));
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(74, 222, 128, 0.4);
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        .back-to-top {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            z-index: 999;
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
 </head>
+
 <body class="bg-white">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
@@ -161,15 +22,23 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
                     <!-- <h1 class="text-2xl font-bold gradient-text">CNX 4.0</h1> -->
-                     <a href="#"><img class="w-32" src="./img/logo.jpeg" alt="logo"></a>
+                    <a href="#"><img class="w-32" src="./img/logo.jpeg" alt="cnx-logo"></a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#solution" class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Notre Solution MCH</a>
-                        <a href="#parcours" class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Le Parcours Employé</a>
-                        <a href="#benefices" class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Bénéfices Clés</a>
-                        <a href="#contact" class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                        <button class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium">Demander une Démo</button>
+                        <a href="#solution"
+                            class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Notre
+                            Solution MCH</a>
+                        <a href="#parcours"
+                            class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Le
+                            Parcours Employé</a>
+                        <a href="#benefices"
+                            class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Bénéfices
+                            Clés</a>
+                        <a href="#contact"
+                            class="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <button class="btn-primary text-white px-6 py-2 rounded-full text-sm font-medium"
+                            onclick="openModal()">Demander une Démo</button>
                     </div>
                 </div>
             </div>
@@ -179,21 +48,40 @@
     <!-- Hero Section -->
     <section class="hero-gradient py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center animate-fade-in">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                    Transformez votre <span class="gradient-text">Capital Humain</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Digitalisez l'expérience employé avec notre solution MCH intégrée, 
-                    de l'attraction des talents au développement des compétences
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="btn-primary text-white px-8 py-4 rounded-full text-lg font-medium">
-                        <i class="fas fa-play mr-2"></i>Découvrir la Solution
-                    </button>
-                    <button class="border-2 border-green-500 text-green-500 px-8 py-4 rounded-full text-lg font-medium hover:bg-green-50 transition-colors">
-                        <i class="fas fa-calendar mr-2"></i>Demander une démo
-                    </button>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left animate-fade-in">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                        Transformez votre <span class="gradient-text">Capital Humain</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Digitalisez l'expérience employé avec notre solution MCH intégrée,
+                        de l'attraction des talents au développement des compétences
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
+                        <button class="btn-primary text-white px-8 py-4 rounded-full text-lg font-medium">
+                            <i class="fas fa-play mr-2"></i>Découvrir la Solution
+                        </button>
+                        <button
+                            class="border-2 border-green-500 text-green-500 px-8 py-4 rounded-full text-lg font-medium hover:bg-green-50 transition-colors"
+                            onclick="openModal()">
+                            <i class="fas fa-calendar mr-2"></i>Demander une démo
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="./img/img_hero.png" alt="CNX MCH Interface" 
+                         class="w-full rounded-lg mx-auto animate-float" 
+                         style="animation: float 6s ease-in-out infinite;"/>
+                    <style>
+                        @keyframes float {
+                            0% { transform: translateY(0px); }
+                            50% { transform: translateY(-20px); }
+                            100% { transform: translateY(0px); }
+                        }
+                        .animate-float {
+                            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+                        }
+                    </style>
                 </div>
             </div>
         </div>
@@ -205,34 +93,37 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">Notre Solution de Gestion du Capital Humain</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Une plateforme complète et modulaire qui accompagne chaque étape du cycle de vie de vos employés, 
+                    Une plateforme complète et modulaire qui accompagne chaque étape du cycle de vie de vos employés,
                     centrée sur l'expérience et adaptable à vos besoins spécifiques.
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-users text-2xl cnx-green"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Recrutement & Talent</h3>
-                    <p class="text-gray-600">Attirez, évaluez et intégrez les meilleurs talents avec des processus digitalisés et efficaces.</p>
+                    <p class="text-gray-600">Attirez, évaluez et intégrez les meilleurs talents avec des processus
+                        digitalisés et efficaces.</p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-chart-line text-2xl cnx-green"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Performance & Développement</h3>
-                    <p class="text-gray-600">Pilotez la performance et accompagnez le développement des compétences de vos équipes.</p>
+                    <p class="text-gray-600">Pilotez la performance et accompagnez le développement des compétences de
+                        vos équipes.</p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-shield-alt text-2xl cnx-green"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Conformité & Sécurité</h3>
-                    <p class="text-gray-600">Assurez la conformité légale et la sécurité des données avec nos outils avancés.</p>
+                    <p class="text-gray-600">Assurez la conformité légale et la sécurité des données avec nos outils
+                        avancés.</p>
                 </div>
             </div>
         </div>
@@ -244,14 +135,15 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">La Transformation RH en Action</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Explorez comment notre solution MCH accompagne chaque étape du parcours employé, 
+                    Explorez comment notre solution MCH accompagne chaque étape du parcours employé,
                     de l'attraction des talents à leur développement et fidélisation.
                 </p>
             </div>
 
             <!-- Steps Navigation -->
             <div class="flex justify-center gap-4 mb-12 text-sm">
-                <button class="step-button active px-6 py-3 rounded-full transition-all" onclick="showStep(1)" id="step-1">
+                <button class="step-button active px-6 py-3 rounded-full transition-all" onclick="showStep(1)"
+                    id="step-1">
                     <i class="fas fa-search mr-2"></i>1. Sourcing & Acquisition
                 </button>
                 <button class="step-button px-6 py-3 rounded-full transition-all" onclick="showStep(2)" id="step-2">
@@ -273,66 +165,82 @@
                 <!-- Step 1 Content -->
                 <div id="content-1" class="step-content active">
                     <div class="bg-gray-50 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Sourcing & Acquisition des Talents</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Sourcing & Acquisition des Talents
+                        </h3>
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-bullseye cnx-green"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Définition du Besoin</h4>
-                                        <p class="text-gray-600">Création digitale des fiches de poste avec critères d'évaluation et validation workflow.</p>
+                                        <p class="text-gray-600">Création digitale des fiches de poste avec critères
+                                            d'évaluation et validation workflow.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-network-wired cnx-green"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Sourcing Multi-canal</h4>
-                                        <p class="text-gray-600">Diffusion automatique sur jobboards, réseaux sociaux et cooptation interne.</p>
+                                        <p class="text-gray-600">Diffusion automatique sur jobboards, réseaux sociaux et
+                                            cooptation interne.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-filter cnx-green"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Présélection Intelligente</h4>
-                                        <p class="text-gray-600">Filtres automatiques et scoring des candidatures selon vos critères.</p>
+                                        <p class="text-gray-600">Filtres automatiques et scoring des candidatures selon
+                                            vos critères.</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-calendar-check cnx-green"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Gestion des Entretiens</h4>
-                                        <p class="text-gray-600">Planification automatique et grilles d'évaluation standardisées.</p>
+                                        <p class="text-gray-600">Planification automatique et grilles d'évaluation
+                                            standardisées.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-check-circle cnx-green"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Décision & Proposition</h4>
-                                        <p class="text-gray-600">Processus de décision collaboratif et génération automatique d'offres.</p>
+                                        <p class="text-gray-600">Processus de décision collaboratif et génération
+                                            automatique d'offres.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="bg-green-50 p-4 rounded-lg">
-                                    <h5 class="font-semibold text-green-800 mb-2">Fonctionnalités CNX MCH impliqués:</h5>
+                                    <h5 class="font-semibold text-green-800 mb-2">Fonctionnalités CNX MCH impliqués:
+                                    </h5>
                                     <div class="flex flex-wrap gap-2">
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Recrutement & Intégration</span>
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Référentiel RH</span>
+                                        <span
+                                            class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Recrutement
+                                            & Intégration</span>
+                                        <span
+                                            class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Référentiel
+                                            RH</span>
                                     </div>
                                 </div>
                             </div>
@@ -347,63 +255,76 @@
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-clipboard-list text-blue-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Préparation d'Arrivée</h4>
-                                        <p class="text-gray-600">Checklist automatisée et préparation du poste de travail.</p>
+                                        <p class="text-gray-600">Checklist automatisée et préparation du poste de
+                                            travail.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-route text-blue-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Parcours d'Intégration</h4>
-                                        <p class="text-gray-600">Parcours personnalisé avec formation et découverte de l'entreprise.</p>
+                                        <p class="text-gray-600">Parcours personnalisé avec formation et découverte de
+                                            l'entreprise.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-users text-blue-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Socialisation</h4>
-                                        <p class="text-gray-600">Mise en relation avec l'équipe et assignation d'un parrain/mentor.</p>
+                                        <p class="text-gray-600">Mise en relation avec l'équipe et assignation d'un
+                                            parrain/mentor.</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-graduation-cap text-blue-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Formation Initiale</h4>
-                                        <p class="text-gray-600">Modules de formation obligatoires et spécifiques au poste.</p>
+                                        <p class="text-gray-600">Modules de formation obligatoires et spécifiques au
+                                            poste.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-comments text-blue-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Suivi & Feedback</h4>
-                                        <p class="text-gray-600">Points d'étape réguliers et collecte de feedback sur l'intégration.</p>
+                                        <p class="text-gray-600">Points d'étape réguliers et collecte de feedback sur
+                                            l'intégration.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="bg-blue-50 p-4 rounded-lg">
                                     <h5 class="font-semibold text-blue-800 mb-2">Fonctionnalités CNX MCH impliqués:</h5>
                                     <div class="flex flex-wrap gap-2">
-                                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Intégration</span>
-                                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Formation</span>
-                                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Gestion Administrative</span>
+                                        <span
+                                            class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Intégration</span>
+                                        <span
+                                            class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Formation</span>
+                                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Gestion
+                                            Administrative</span>
                                     </div>
                                 </div>
                             </div>
@@ -418,63 +339,77 @@
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-ship text-purple-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Fixation d'Objectifs</h4>
-                                        <p class="text-gray-600">Définition d'objectifs SMART alignés sur la stratégie entreprise.</p>
+                                        <p class="text-gray-600">Définition d'objectifs SMART alignés sur la stratégie
+                                            entreprise.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-chart-line text-purple-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Suivi Performance</h4>
-                                        <p class="text-gray-600">Tableaux de bord temps réel et indicateurs de performance clés.</p>
+                                        <p class="text-gray-600">Tableaux de bord temps réel et indicateurs de
+                                            performance clés.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-star text-purple-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Évaluations</h4>
-                                        <p class="text-gray-600">Entretiens annuels et évaluations 360° digitalisées.</p>
+                                        <p class="text-gray-600">Entretiens annuels et évaluations 360° digitalisées.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-heart text-purple-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Engagement</h4>
-                                        <p class="text-gray-600">Mesure du niveau d'engagement et plans d'action personnalisés.</p>
+                                        <p class="text-gray-600">Mesure du niveau d'engagement et plans d'action
+                                            personnalisés.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-gift text-purple-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Reconnaissance</h4>
-                                        <p class="text-gray-600">Système de reconnaissance et récompenses personnalisées.</p>
+                                        <p class="text-gray-600">Système de reconnaissance et récompenses
+                                            personnalisées.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h5 class="font-semibold text-purple-800 mb-2">Fonctionnalités CNX MCH impliqués:</h5>
+                                    <h5 class="font-semibold text-purple-800 mb-2">Fonctionnalités CNX MCH impliqués:
+                                    </h5>
                                     <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Performance</span>
-                                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Évaluations</span>
-                                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Engagement</span>
+                                        <span
+                                            class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Performance</span>
+                                        <span
+                                            class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Évaluations</span>
+                                        <span
+                                            class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Engagement</span>
                                     </div>
                                 </div>
                             </div>
@@ -489,17 +424,20 @@
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-map text-yellow-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Plans de Carrière</h4>
-                                        <p class="text-gray-600">Cartographie des parcours possibles et compétences requises.</p>
+                                        <p class="text-gray-600">Cartographie des parcours possibles et compétences
+                                            requises.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-puzzle-piece text-yellow-500"></i>
                                     </div>
                                     <div>
@@ -507,9 +445,10 @@
                                         <p class="text-gray-600">Référentiel de compétences et évaluation des gaps.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-graduation-cap text-yellow-500"></i>
                                     </div>
                                     <div>
@@ -518,20 +457,23 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-exchange-alt text-yellow-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Mobilité Interne</h4>
-                                        <p class="text-gray-600">Opportunités internes et matching automatique profil-poste.</p>
+                                        <p class="text-gray-600">Opportunités internes et matching automatique
+                                            profil-poste.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-user-tie text-yellow-500"></i>
                                     </div>
                                     <div>
@@ -539,13 +481,18 @@
                                         <p class="text-gray-600">Identification et préparation des successeurs clés.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="bg-yellow-50 p-4 rounded-lg">
-                                    <h5 class="font-semibold text-yellow-800 mb-2">Fonctionnalités CNX MCH impliqués:</h5>
+                                    <h5 class="font-semibold text-yellow-800 mb-2">Fonctionnalités CNX MCH impliqués:
+                                    </h5>
                                     <div class="flex flex-wrap gap-2">
-                                        <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Carrières & Talents</span>
-                                        <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Formation</span>
-                                        <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">GPEC</span>
+                                        <span
+                                            class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Carrières
+                                            & Talents</span>
+                                        <span
+                                            class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Formation</span>
+                                        <span
+                                            class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">GPEC</span>
                                     </div>
                                 </div>
                             </div>
@@ -560,49 +507,58 @@
                         <div class="grid md:grid-cols-2 gap-8">
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-clock text-red-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Préparation de Départ</h4>
-                                        <p class="text-gray-600">Gestion des préavis et planification de la transition.</p>
+                                        <p class="text-gray-600">Gestion des préavis et planification de la transition.
+                                        </p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-exchange text-red-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Transfert de Connaissances</h4>
-                                        <p class="text-gray-600">Documentation et transmission des savoirs critiques.</p>
+                                        <p class="text-gray-600">Documentation et transmission des savoirs critiques.
+                                        </p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-comments text-red-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Entretien de Sortie</h4>
-                                        <p class="text-gray-600">Collecte de feedback et analyse des motifs de départ.</p>
+                                        <p class="text-gray-600">Collecte de feedback et analyse des motifs de départ.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-file-alt text-red-500"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-lg mb-2">Formalités Administratives</h4>
-                                        <p class="text-gray-600">Génération automatique des documents de fin de contrat.</p>
+                                        <p class="text-gray-600">Génération automatique des documents de fin de contrat.
+                                        </p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div
+                                        class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                                         <i class="fas fa-network-wired text-red-500"></i>
                                     </div>
                                     <div>
@@ -610,13 +566,16 @@
                                         <p class="text-gray-600">Maintien du lien avec les anciens employés.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="bg-red-50 p-4 rounded-lg">
                                     <h5 class="font-semibold text-red-800 mb-2">Fonctionnalités CNX MCH impliqués:</h5>
                                     <div class="flex flex-wrap gap-2">
-                                        <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">Gestion Administrative</span>
-                                        <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">Documentation</span>
-                                        <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">Alumni</span>
+                                        <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">Gestion
+                                            Administrative</span>
+                                        <span
+                                            class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">Documentation</span>
+                                        <span
+                                            class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">Alumni</span>
                                     </div>
                                 </div>
                             </div>
@@ -633,7 +592,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">Modules Transversaux CNX MCH</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Notre solution complète s'appuie sur des modules transversaux qui assurent 
+                    Notre solution complète s'appuie sur des modules transversaux qui assurent
                     la cohérence et l'efficacité de l'ensemble de votre écosystème RH.
                 </p>
             </div>
@@ -641,7 +600,8 @@
             <div class="relative">
                 <!-- Central Circle -->
                 <div class="flex justify-center mb-16">
-                    <div class="central-circle w-48 h-48 rounded-full flex flex-col items-center justify-center text-white shadow-2xl">
+                    <div
+                        class="central-circle w-48 h-48 rounded-full flex flex-col items-center justify-center text-white shadow-2xl">
                         <i class="fas fa-users text-4xl mb-2"></i>
                         <h3 class="text-xl font-bold">CNX MCH</h3>
                         <p class="text-sm">Solution Complète</p>
@@ -650,27 +610,32 @@
 
                 <!-- Surrounding Modules -->
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
-                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto" onclick="showModuleDescription('analyses')">
+                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+                        onclick="showModuleDescription('analyses')">
                         <i class="fas fa-chart-bar text-2xl cnx-green mb-2"></i>
                         <h4 class="text-center text-sm font-semibold">Analyses Décisionnelles</h4>
                     </div>
-                    
-                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto" onclick="showModuleDescription('risques')">
+
+                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+                        onclick="showModuleDescription('risques')">
                         <i class="fas fa-shield-alt text-2xl cnx-green mb-2"></i>
                         <h4 class="text-center text-sm font-semibold">Gestion des Risques</h4>
                     </div>
-                    
-                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto" onclick="showModuleDescription('securite')">
+
+                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+                        onclick="showModuleDescription('securite')">
                         <i class="fas fa-lock text-2xl cnx-green mb-2"></i>
                         <h4 class="text-center text-sm font-semibold">Sécurité & Confidentialité</h4>
                     </div>
-                    
-                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto" onclick="showModuleDescription('interfacage')">
+
+                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+                        onclick="showModuleDescription('interfacage')">
                         <i class="fas fa-link text-2xl cnx-green mb-2"></i>
                         <h4 class="text-center text-sm font-semibold">Interfaçage Systèmes</h4>
                     </div>
-                    
-                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto" onclick="showModuleDescription('conformite')">
+
+                    <div class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+                        onclick="showModuleDescription('conformite')">
                         <i class="fas fa-balance-scale text-2xl cnx-green mb-2"></i>
                         <h4 class="text-center text-sm font-semibold">Conformité Légale</h4>
                     </div>
@@ -680,7 +645,9 @@
                 <div class="max-w-4xl mx-auto">
                     <div id="module-analyses" class="module-description bg-white p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold cnx-green mb-4">Analyses Décisionnelles</h3>
-                        <p class="text-gray-600 mb-6">Tableaux de bord dynamiques et rapports intelligents permettant aux décideurs RH d'accéder aux insights stratégiques pour optimiser la gestion des talents et la performance organisationnelle.</p>
+                        <p class="text-gray-600 mb-6">Tableaux de bord dynamiques et rapports intelligents permettant
+                            aux décideurs RH d'accéder aux insights stratégiques pour optimiser la gestion des talents
+                            et la performance organisationnelle.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h4 class="font-semibold mb-2 cnx-green">Fonctionnalités clés:</h4>
@@ -705,7 +672,9 @@
 
                     <div id="module-risques" class="module-description bg-white p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold cnx-green mb-4">Gestion des Risques</h3>
-                        <p class="text-gray-600 mb-6">Identification proactive, évaluation et atténuation des risques RH avec des alertes automatiques et des plans d'action pour assurer la continuité des opérations et la conformité.</p>
+                        <p class="text-gray-600 mb-6">Identification proactive, évaluation et atténuation des risques RH
+                            avec des alertes automatiques et des plans d'action pour assurer la continuité des
+                            opérations et la conformité.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h4 class="font-semibold mb-2 cnx-green">Fonctionnalités clés:</h4>
@@ -730,7 +699,9 @@
 
                     <div id="module-securite" class="module-description active bg-white p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold cnx-green mb-4">Sécurité & Confidentialité</h3>
-                        <p class="text-gray-600 mb-6">Protection robuste des données sensibles des employés grâce à un chiffrement avancé, des contrôles d'accès granulaires et des audits de sécurité réguliers conformes aux normes internationales.</p>
+                        <p class="text-gray-600 mb-6">Protection robuste des données sensibles des employés grâce à un
+                            chiffrement avancé, des contrôles d'accès granulaires et des audits de sécurité réguliers
+                            conformes aux normes internationales.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h4 class="font-semibold mb-2 cnx-green">Fonctionnalités clés:</h4>
@@ -755,7 +726,9 @@
 
                     <div id="module-interfacage" class="module-description bg-white p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold cnx-green mb-4">Interfaçage Systèmes</h3>
-                        <p class="text-gray-600 mb-6">Connexions fluides avec vos systèmes existants (paie, ERP, outils collaboratifs) grâce à des API robustes et des connecteurs prédéfinis, éliminant les silos d'information.</p>
+                        <p class="text-gray-600 mb-6">Connexions fluides avec vos systèmes existants (paie, ERP, outils
+                            collaboratifs) grâce à des API robustes et des connecteurs prédéfinis, éliminant les silos
+                            d'information.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h4 class="font-semibold mb-2 cnx-green">Fonctionnalités clés:</h4>
@@ -780,7 +753,9 @@
 
                     <div id="module-conformite" class="module-description bg-white p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold cnx-green mb-4">Conformité Légale</h3>
-                        <p class="text-gray-600 mb-6">Respect automatisé des obligations légales et réglementaires en matière RH avec mises à jour régulières pour s'adapter aux évolutions législatives et minimiser les risques juridiques.</p>
+                        <p class="text-gray-600 mb-6">Respect automatisé des obligations légales et réglementaires en
+                            matière RH avec mises à jour régulières pour s'adapter aux évolutions législatives et
+                            minimiser les risques juridiques.</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h4 class="font-semibold mb-2 cnx-green">Fonctionnalités clés:</h4>
@@ -813,7 +788,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">Les Bénéfices Clés de CNX MCH</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Notre solution apporte une valeur ajoutée significative à chaque niveau de 
+                    Notre solution apporte une valeur ajoutée significative à chaque niveau de
                     l'organisation, de l'employé aux dirigeants.
                 </p>
             </div>
@@ -919,15 +894,17 @@
                 Prêt à Transformer votre Capital Humain ?
             </h2>
             <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-                Le CNX MCH accompagne la transformation RH de votre entreprise, 
-                positionnant la fonction Capital Humain comme un véritable partenaire 
+                Le CNX MCH accompagne la transformation RH de votre entreprise,
+                positionnant la fonction Capital Humain comme un véritable partenaire
                 stratégique.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="window.open('https://forms.gle/demo-cnx-mch', '_blank')" class="bg-white text-green-500 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors">
+                <button onclick="openModal()"
+                    class="bg-white text-green-500 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors">
                     <i class="fas fa-calendar mr-2"></i>Demander une démo
                 </button>
-                <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-green-500 transition-colors">
+                <button
+                    class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-green-500 transition-colors">
                     <i class="fas fa-info-circle mr-2"></i>Découvrir notre offre
                 </button>
             </div>
@@ -940,28 +917,30 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4">CNX 4.0</h3>
-                    <p class="text-gray-400 mb-4">Votre partenaire pour l'excellence opérationnelle et la transformation digitale.</p>
+                    <a href="#"><p class="text-3xl font-bold"><span class="text-gray-400">CNX 4.</span><span class="text-green-400">0</span></p></a>
+                    <p class="text-gray-400 mb-4">Votre partenaire pour l'excellence opérationnelle et la transformation
+                        digitale.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://ga.linkedin.com/company/cnx4-0" class="text-gray-400 hover:text-green-400 transition-colors" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition-colors" title="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">
-                            <i class="fab fa-facebook"></i>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition-colors" title="Meta (Facebook)">
+                            <i class="fab fa-meta"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Solutions</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" class="hover:text-green-400 transition-colors">MCH - Capital Humain</a></li>
-                        <li><a href="#" class="hover:text-green-400 transition-colors">Nos Autres Solutions</a></li>                    </ul>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Nos Autres Solutions</a></li>
+                    </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Entreprise</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -969,22 +948,23 @@
                         <li><a href="#" class="hover:text-green-400 transition-colors">Carrières</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><i class="fas fa-envelope mr-2"></i>support@cnx4-0.com</li>
                         <li><i class="fas fa-phone mr-2"></i>+241 076402886</li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i>Paris, France</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Ancienne Sobraga, Immeuble La Vénézienne, Rez de Chaussée, Porte Gauche Libreville, GA</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400">&copy; 2025 CNX 4.0. Tous droits réservés.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Mentions Légales</a>
-                    <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Politique de Confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Politique de
+                        Confidentialité</a>
                 </div>
             </div>
         </div>
@@ -995,19 +975,20 @@
         <div class="chatbot-bubble" onclick="toggleChatbot()">
             <i class="fas fa-comments text-white text-xl"></i>
         </div>
-        
+
         <!-- Chatbot Interface -->
-        <div id="chatbot-interface" class="fixed bottom-24 right-8 w-80 bg-white rounded-lg shadow-xl hidden max-h-[460px] flex flex-col">
+        <div id="chatbot-interface"
+            class="fixed bottom-24 right-8 w-80 bg-white rounded-lg shadow-xl hidden max-h-[460px] flex flex-col">
             <!-- Header -->
             <div class="p-3 border-b border-gray-200">
                 <div class="flex justify-between items-center">
                     <h3 class="text-base font-semibold text-gray-800">CNX MCH Assistant</h3>
-                    <button onclick="toggleChatbot()" class="text-gray-500 hover:text-gray-700">
+                    <button onclick="toggleChatbot()" class="focus:outline-none">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Chat Messages Container -->
             <div id="chat-messages" class="p-3 overflow-y-auto space-y-3 flex-grow" style="max-height: 250px">
                 <!-- Welcome Message -->
@@ -1025,30 +1006,35 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Quick Actions -->
             <div class="p-2 border-t border-gray-200 space-y-1">
-                <button onclick="handleQuickAction('features')" class="w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
+                <button onclick="handleQuickAction('features')"
+                    class="w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
                     <i class="fas fa-list-ul mr-2 text-cnx-green"></i> Fonctionnalités MCH
                 </button>
-                <button onclick="handleQuickAction('demo')" class="w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
+                <button onclick="handleQuickAction('demo')"
+                    class="w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
                     <i class="fas fa-desktop mr-2 text-cnx-green"></i> Demander une démo
                 </button>
-                <button onclick="handleQuickAction('pricing')" class="w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
+                <button onclick="handleQuickAction('pricing')"
+                    class="w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
                     <i class="fas fa-tag mr-2 text-cnx-green"></i> Tarifs
                 </button>
-                <a href="tel:+24176402886" class="block w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
+                <a href="tel:+24176402886"
+                    class="block w-full text-left p-1.5 rounded hover:bg-gray-100 transition-colors text-sm">
                     <i class="fas fa-phone mr-2 text-cnx-green"></i> Appeler (+241 076402886)
                 </a>
             </div>
-            
+
             <!-- Message Input -->
             <div class="p-2 border-t border-gray-200">
                 <div class="flex space-x-2">
-                    <input type="text" id="chat-input" placeholder="Écrivez votre message..." 
-                           class="flex-1 p-1.5 text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-cnx-green"
-                           onkeypress="handleChatInput(event)">
-                    <button onclick="sendMessage()" class="px-3 py-1.5 bg-cnx-green text-white rounded-lg hover:bg-cnx-dark-green transition-colors">
+                    <input type="text" id="chat-input" placeholder="Écrivez votre message..."
+                        class="flex-1 p-1.5 text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-cnx-green"
+                        onkeypress="handleChatInput(event)">
+                    <button onclick="sendMessage()"
+                        class="px-3 py-1.5 bg-cnx-green text-white rounded-lg hover:bg-cnx-dark-green transition-colors">
                         <i class="fas fa-paper-plane text-sm"></i>
                     </button>
                 </div>
@@ -1057,9 +1043,168 @@
     </div>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top bg-cnx-green text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-cnx-dark-green transition-colors" onclick="scrollToTop()">
+    <button
+        class="back-to-top bg-cnx-green text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-cnx-dark-green transition-colors"
+        onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Modal de réservation de démo -->
+    <div id="demo-modal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden modal">
+        <div class="modal-container w-full max-w-md md:max-w-xl m-4">
+            <div class="bg-white rounded-lg overflow-hidden">
+                <div class="gradient-bg text-white px-6 py-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Réserver une démonstration</h3>
+                        <button onclick="closeModal()" class="focus:outline-none">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <p class="text-gray-700 mb-4">Découvrez comment notre solution MCH peut répondre à vos besoins
+                            spécifiques. Choisissez un créneau qui vous convient pour une démonstration personnalisée.
+                        </p>
+                    </div>
+
+                    <div id="form-errors" class="hidden mb-4 p-4 bg-red-50 border border-red-200 rounded-md">
+                        <p class="text-red-600 font-medium mb-2">Veuillez compléter les informations suivantes :</p>
+                        <ul class="text-red-600 text-sm list-disc list-inside" id="error-list"></ul>
+                    </div>
+                    <form id="demo-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fullname" class="block text-sm font-medium text-gray-700 mb-1">Nom
+                                    complet</label>
+                                <input type="text" id="fullname"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div>
+                                <label for="company"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
+                                <input type="text" id="company"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email
+                                    professionnel</label>
+                                <input type="email" id="email"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div>
+                                <label for="phone"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
+                                <input type="tel" id="phone"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Modules d'intérêt</label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="module-recrutement" class="mr-2">
+                                    <label for="module-recrutement" class="text-sm text-gray-600">Recrutement &
+                                        Talent</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="module-performance" class="mr-2">
+                                    <label for="module-performance" class="text-sm text-gray-600">Performance</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="module-formation" class="mr-2">
+                                    <label for="module-formation" class="text-sm text-gray-600">Formation</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="module-risques" class="mr-2">
+                                    <label for="module-risques" class="text-sm text-gray-600">Gestion des
+                                        risques</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="demo-date" class="block text-sm font-medium text-gray-700 mb-1">Date et heure souhaitées</label>
+                            <input type="text" id="demo-date" class="datepicker w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Choisir une date">
+                        </div>
+
+                        <div class="hidden" id="time-slots">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Créneaux disponibles</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button"
+                                    class="time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-green-50 hover:border-green-500 focus:outline-none">9:00</button>
+                                <button type="button"
+                                    class="time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-green-50 hover:border-green-500 focus:outline-none">10:30</button>
+                                <button type="button"
+                                    class="time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-green-50 hover:border-green-500 focus:outline-none">14:00</button>
+                                <button type="button"
+                                    class="time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-green-50 hover:border-green-500 focus:outline-none">15:30</button>
+                                <button type="button"
+                                    class="time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-green-50 hover:border-green-500 focus:outline-none">17:00</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message
+                                (optionnel)</label>
+                            <textarea id="message" rows="3"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="closeModal()"
+                                class="px-6 py-3 border border-gray-300 rounded-md mr-4 hover:bg-gray-50">
+                                Annuler
+                            </button>
+                            <button type="button" id="submit-demo"
+                                class="px-6 py-3 bg-green-400 text-white rounded-md hover:bg-green-700">
+                                Confirmer la réservation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div id="confirmation-modal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden modal">
+        <div class="modal-container w-full max-w-md m-4">
+            <div class="bg-white rounded-lg overflow-hidden">
+                <div class="gradient-bg text-white px-6 py-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Réservation confirmée</h3>
+                        <button onclick="closeConfirmationModal()" class="focus:outline-none">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <div class="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-check-circle text-green-600 text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Merci pour votre demande</h4>
+                    <p class="text-gray-600 mb-6">Votre démonstration a été programmée avec succès. Un e-mail de
+                        confirmation vous a été envoyé.</p>
+                    <div id="confirmation-details" class="bg-gray-50 p-4 rounded-lg text-left mb-6">
+                        <p class="font-medium mb-1">Détails de la réservation :</p>
+                        <p class="text-gray-600"><span class="font-medium">Date :</span> <span id="confirm-date">12/05/2025</span></p>
+                        <p class="text-gray-600"><span class="font-medium">Heure :</span> <span id="confirm-time">14:00</span></p>
+                    </div>
+                    <button onclick="closeConfirmationModal()"
+                        class="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Step Navigation
@@ -1068,15 +1213,15 @@
             document.querySelectorAll('.step-content').forEach(content => {
                 content.classList.remove('active');
             });
-            
+
             // Remove active class from all buttons
             document.querySelectorAll('.step-button').forEach(button => {
                 button.classList.remove('active');
             });
-            
+
             // Show selected step content
             document.getElementById(`content-${stepNumber}`).classList.add('active');
-            
+
             // Add active class to selected button
             document.getElementById(`step-${stepNumber}`).classList.add('active');
         }
@@ -1087,7 +1232,7 @@
             document.querySelectorAll('.module-description').forEach(desc => {
                 desc.classList.remove('active');
             });
-            
+
             // Show selected module description
             document.getElementById(`module-${moduleType}`).classList.add('active');
         }
@@ -1183,7 +1328,7 @@
         // Find matching keywords in message
         function findKeywordMatch(message) {
             const normalizedMessage = message.toLowerCase();
-            
+
             for (const [category, data] of Object.entries(keywords)) {
                 for (const pattern of data.patterns) {
                     if (normalizedMessage.includes(pattern)) {
@@ -1208,11 +1353,11 @@
         function sendMessage() {
             const input = document.getElementById('chat-input');
             const message = input.value.trim();
-            
+
             if (message) {
                 addMessage(message, 'user');
                 input.value = '';
-                
+
                 // Find keyword match and respond accordingly
                 const match = findKeywordMatch(message);
                 setTimeout(() => {
@@ -1249,7 +1394,7 @@
         }
 
         // Show/Hide Back to Top Button
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const backToTopButton = document.querySelector('.back-to-top');
             if (window.pageYOffset > 300) {
                 backToTopButton.style.display = 'flex';
@@ -1264,7 +1409,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-fade-in');
@@ -1278,9 +1423,92 @@
         });
 
         // Initialize default module description
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             showModuleDescription('securite');
+        });
+
+        // Modals
+        function openModal() {
+            document.getElementById('demo-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('demo-modal').classList.add('hidden');
+        }
+
+        function closeConfirmationModal() {
+            document.getElementById('confirmation-modal').classList.add('hidden');
+        }
+
+        // Flatpickr pour le calendrier
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr(".datepicker", {
+                locale: 'fr',
+                minDate: "today",
+                dateFormat: "d/m/Y",
+                disable: [
+                    function (date) {
+                        // Désactiver weekends
+                        return (date.getDay() === 0 || date.getDay() === 6);
+                    }
+                ],
+                onChange: function (selectedDates, dateStr) {
+                    document.getElementById('time-slots').classList.remove('hidden');
+                },
+                enableTime: false,
+                altInput: true,
+                altFormat: "j F Y",
+                monthSelectorType: 'static'
+            });
+
+            // Sélection des créneaux horaires
+            const timeSlots = document.querySelectorAll('.time-slot');
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', function () {
+                    timeSlots.forEach(s => s.classList.remove('bg-green-50', 'border-green-500', 'text-green-700'));
+                    this.classList.add('bg-green-50', 'border-green-500', 'text-green-700');
+                });
+            });
+
+            // Formulaire de démo
+            document.getElementById('submit-demo').addEventListener('click', function () {
+                const name = document.getElementById('fullname').value;
+                const email = document.getElementById('email').value;
+                const date = document.getElementById('demo-date').value;
+
+                let selectedTime = "";
+                document.querySelectorAll('.time-slot').forEach(slot => {
+                    if (slot.classList.contains('bg-green-50')) {
+                        selectedTime = slot.textContent;
+                    }
+                });
+
+                const errors = [];
+                if (!name) errors.push("Nom complet");
+                if (!email) errors.push("Email professionnel");
+                if (!date) errors.push("Date souhaitée");
+                if (!selectedTime) errors.push("Créneau horaire");
+
+                const errorDiv = document.getElementById('form-errors');
+                const errorList = document.getElementById('error-list');
+
+                if (errors.length > 0) {
+                    errorList.innerHTML = errors.map(error => `<li>${error}</li>`).join('');
+                    errorDiv.classList.remove('hidden');
+                    errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    errorDiv.classList.add('hidden');
+                    // Afficher les détails de confirmation
+                    document.getElementById('confirm-date').textContent = date;
+                    document.getElementById('confirm-time').textContent = selectedTime;
+
+                    // Cacher le modal de démo et afficher confirmation
+                    document.getElementById('demo-modal').classList.add('hidden');
+                    document.getElementById('confirmation-modal').classList.remove('hidden');
+                }
+            });
         });
     </script>
 </body>
+
 </html>
