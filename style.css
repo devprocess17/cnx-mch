@@ -1,7 +1,7 @@
 :root {
-  --cnx-green: #4ade80;
-  --cnx-dark-green: #22c55e;
-  --cnx-light-green: #86efac;
+  --cnx-green: #237954;
+  --cnx-dark-green: #166534;
+  --cnx-light-green: #166534;
   --cnx-gray: #6b7280;
   --cnx-dark-gray: #374151;
 }
@@ -107,6 +107,8 @@ body {
 
 .hero-gradient {
   background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .card-hover {
@@ -151,26 +153,96 @@ body {
   display: none;
 }
 
-
 .gradient-bg {
-    background: linear-gradient(135deg, #4ade80 0%, #7cd19b 100%);
+  background: linear-gradient(135deg, #237954 0%, #166534 100%);
 }
 
 .modal {
-    transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 
 .modal-container {
-    background-color: white;
-    border-radius: 12px;
-    max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 12px;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+.bg-color {
+    background-color: #ede8dd
+}
 .custom-calendar {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations for the decorative shapes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Decorative shapes styles */
+.decorative-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image-container {
+  position: relative;
+  z-index: 2;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  background: var(--cnx-green);
+  opacity: 0.15;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.shape-square {
+  border-radius: 10px;
+  background: #fbbf24; /* Amber/yellow */
+  opacity: 0.15;
+  animation: rotate 25s linear infinite;
+}
+
+.shape-line {
+  height: 15px;
+  background: #ec2f6e; /* Gray */
+  opacity: 0.15;
+  transform-origin: center;
+  animation: float 7s ease-in-out infinite;
+}
+
+.animate-float {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Cadre vert pour l'image paie */
+.paie-frame {
+  position: absolute;
+  top: 40%;
+  left: 20rem; /* équivalent à left-72 */
+  transform: translate(-50%, -50%);
+  border: 18px solid var(--cnx-green);
+  width: 70%; /* équivalent à w-96 */
+  height: 80%; /* équivalent à h-80 */
+  z-index: 10;
 }
