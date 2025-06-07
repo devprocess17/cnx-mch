@@ -217,7 +217,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <!-- Image à gauche -->
-          <div class="relative mb-8 md:mb-0 hidden md:block">
+          <div class="relative mb-8 md:mb-0 hidden md:hidden lg:block">
             <div class="relative z-10">
               <img
                 src="./img/organisation_mockup.png"
@@ -229,7 +229,7 @@
           </div>
 
           <!-- Contenu à droite -->
-          <div class="space-y-8 lg:text-center sm:text-left md:text-left">
+          <div class="space-y-8 text-center lg:text-center sm:text-left md:text-left">
             <div>
               <h2 class="text-4xl font-bold text-gray-900 mb-6">
                 CNXOne HCM<sup>&#174;</sup> est une solution RH de nouvelle génération
@@ -310,14 +310,14 @@
     <!-- La Transformation RH en Action -->
     <section id="parcours" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center sm:text-left mb-16">
+        <div class="text-center mb-16">
           <h2
-            class="text-4xl font-bold text-gray-900 mb-6 text-left lg:text-center"
+            class="text-4xl font-bold text-gray-900 mb-6"
           >
             La transformation RH en action
           </h2>
           <p
-            class="text-xl text-gray-600 max-w-3xl mx-auto text-left lg:text-center"
+            class="text-lg md:text-xl lg:text-xl text-gray-600 max-w-3xl mx-auto"
           >
             Explorez comment notre solution CNXOne HCM accompagne chaque étape du
             parcours employé, de l'attraction des talents à leur développement
@@ -1028,18 +1028,18 @@
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-8">
-            <div>
+            <div class="text-center lg:text-left md:text-center">
               <h2 class="text-4xl font-bold text-gray-900 mb-6">
                 CNX Paie : La solution intelligente de gestion de la paie
               </h2>
-              <p class="text-xl text-gray-600">
+              <p class="text-lg md:text-xl lg:text-xl text-gray-600">
                 Automatisez et sécurisez votre processus de paie avec une
                 solution innovante qui garantit conformité, précision et
                 efficacité. Transformez la gestion de votre paie en un véritable
                 levier de performance RH.
               </p>
             </div>
-            <div class="pt-4">
+            <div class="pt-4 flex justify-center md:justify-start">
               <button
                 class="btn-primary text-white px-8 py-3 rounded-full text-base font-medium hover:bg-blue-700 transition-colors duration-300"
               >
@@ -1067,7 +1067,7 @@
     <!-- Modules Transversaux -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div class="max-w-7xl mx-auto">
-        <div class="lg:text-center sm:text-left mb-16">
+        <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-900 mb-6">
             Modules transversaux CNXOne HCM 
           </h2>
@@ -1080,64 +1080,64 @@
 
         <div class="relative">
           <!-- Central Circle -->
-          <div class="flex justify-center mb-16">
+          <div class="flex justify-center mb-8 sm:mb-16">
             <div
-              class="central-circle w-48 h-48 rounded-full flex flex-col items-center justify-center text-white shadow-2xl"
+              class="central-circle w-36 h-36 sm:w-48 sm:h-48 rounded-full flex flex-col items-center justify-center text-white shadow-2xl text-center p-2"
             >
               <i class="fas fa-users text-4xl mb-2"></i>
               <h3 class="text-xl font-bold">CNXOne HCM </h3>
-              <p class="text-sm">Solution Complète</p>
+              <!-- <p class="text-sm">Solution Complète</p> -->
             </div>
           </div>
 
           <!-- Surrounding Modules -->
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 mb-12 px-2 sm:px-0">
             <div
-              class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('analyses')"
             >
-              <i class="fas fa-chart-bar text-2xl cnx-green mb-2"></i>
-              <h4 class="text-center text-sm font-semibold">
+              <i class="fas fa-chart-bar text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
+              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
                 Analyses Décisionnelles
               </h4>
             </div>
 
             <div
-              class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('risques')"
             >
-              <i class="fas fa-shield-alt text-2xl cnx-green mb-2"></i>
-              <h4 class="text-center text-sm font-semibold">
+              <i class="fas fa-shield-alt text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
+              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
                 Gestion des Risques
               </h4>
             </div>
 
             <div
-              class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('securite')"
             >
-              <i class="fas fa-lock text-2xl cnx-green mb-2"></i>
-              <h4 class="text-center text-sm font-semibold">
+              <i class="fas fa-lock text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
+              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
                 Sécurité & Confidentialité
               </h4>
             </div>
 
             <div
-              class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('interfacage')"
             >
-              <i class="fas fa-link text-2xl cnx-green mb-2"></i>
-              <h4 class="text-center text-sm font-semibold">
+              <i class="fas fa-link text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
+              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
                 Interfaçage Systèmes
               </h4>
             </div>
 
             <div
-              class="module-circle bg-white w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto"
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('conformite')"
             >
-              <i class="fas fa-balance-scale text-2xl cnx-green mb-2"></i>
-              <h4 class="text-center text-sm font-semibold">
+              <i class="fas fa-balance-scale text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
+              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
                 Conformité Légale
               </h4>
             </div>
@@ -1603,7 +1603,7 @@
     <!-- Bénéfices Clés -->
     <section id="benefices" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="max-w-7xl mx-auto">
-        <div class="text-left lg:text-center mb-16">
+        <div class="text-center mb-16">
           <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-6">
             Les bénéfices clés de CNXOne HCM 
           </h2>
@@ -1740,7 +1740,7 @@
     <!-- section tags -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div class="max-w-7xl mx-auto">
-        <div class="text-left lg:text-center mb-8">
+        <div class="text-center mb-8">
           <h2 class="text-4xl lg:text-2xl font-bold text-gray-900">Mots-clés</h2>
           <p class="text-gray-600 mt-2">Découvrez nos domaines d'expertise</p>
         </div>
@@ -1791,7 +1791,7 @@
 
     <!-- CTA Section -->
     <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-cnx-green">
-      <div class="max-w-4xl lg:text-center mx-auto text-left">
+      <div class="max-w-4xl lg:text-center mx-auto text-center">
         <h2 class="text-4xl font-bold text-white mb-6">
           Prêt à transformer votre capital humain ?
         </h2>
@@ -1868,8 +1868,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 text-white">
+      <div class="max-w-7xl mx-auto">
         <!-- Grid principal du footer -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <!-- Logo et description -->
