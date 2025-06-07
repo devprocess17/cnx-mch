@@ -13,6 +13,19 @@ body {
 .cnx-green {
   color: var(--cnx-green);
 }
+
+.cnx-cyan {
+  color: #6bfaff;
+}
+
+/* Icônes de la section bénéfices */
+#benefices .fa-check-circle {
+  color: #00bfc5;
+}
+
+.bg-cyan {
+  background-color: #00a8ad;
+}
 .bg-cnx-green {
   background-color: var(--cnx-green);
 }
@@ -21,6 +34,10 @@ body {
 }
 .border-cnx-green {
   border-color: var(--cnx-green);
+}
+
+.degrader{
+  background: linear-gradient(to bottom left, rgb(90, 236, 241), rgb(255, 255, 255));
 }
 
 .cnxOne{
