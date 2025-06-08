@@ -15,7 +15,7 @@ body {
 }
 
 .cnx-cyan {
-  color: #6bfaff;
+  color: #ffffff;
 }
 
 /* Icônes de la section bénéfices */
@@ -42,6 +42,10 @@ body {
 
 .cnxOne{
   font-size: 15px;
+}
+
+.taille_btn_module{
+  width: 80%;
 }
 
 .step-content {

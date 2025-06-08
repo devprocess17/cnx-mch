@@ -29,7 +29,10 @@
 
   <body class="bg-white">
     <!-- Navigation -->
-    <nav id="main-nav" class="fixed w-full transition-all duration-300 top-0 z-50">
+    <nav
+      id="main-nav"
+      class="fixed w-full transition-all duration-300 top-0 z-50"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex-shrink-0">
@@ -38,7 +41,7 @@
               ><img class="w-32" src="./img/logo_1.png" alt="cnx-logo"
             /></a>
           </div>
-          <div class="hidden md:block">
+          <div class="hidden lg:block md:block text-xs">
             <div class="ml-10 flex items-baseline space-x-4">
               <a
                 href="#solution"
@@ -68,6 +71,7 @@
               </button>
             </div>
           </div>
+
           <!-- Burger Button for Mobile -->
           <div class="md:hidden flex items-center">
             <button
@@ -140,7 +144,7 @@
                 >Contactez-nous</a
               >
               <button
-                class="bg-green-700 text-white px-6 py-2 rounded-full text-base font-medium"
+                class="bg-green-700 text-white px-6 py-2 text-sm rounded-full font-medium"
                 onclick="openModal()"
               >
                 <i class="fas fa-calendar mr-2"></i>Demander une démo
@@ -154,17 +158,29 @@
     <!-- Hero Section -->
     <section class="hero-gradient py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
+        <div
+          class="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center"
+        >
           <div
-            class="md:text-left animate-fade-in order-last md:order-first"
+            class="lg:text-left md:text-center text-center animate-fade-in order-last md:order-first"
           >
             <h1
               class="text-4xl sm:text-xl md:text-6xl font-bold text-gray-900 mb-6"
             >
               Oubliez la gestion RH d’hier.
             </h1>
-            <p class="text-xl sm:text-lg md:text-xl text-gray-700 mb-8 font-medium">
-              Avec <span class="font-semibold text-green-800">CNXOne HCM<sup>&#174;</sup></span>, la solution de gestion du <span class="font-semibold text-green-800">Capital Humain</span>, 100 % gabonaise, conçue pour transformer votre organisation en un modèle de performance et d’agilité.
+            <p
+              class="text-xl sm:text-lg md:text-xl text-gray-700 mb-8 font-medium"
+            >
+              Avec
+              <span class="font-semibold text-green-800"
+                >CNXOne HCM<sup>&#174;</sup></span
+              >, la solution de gestion du
+              <span class="font-semibold text-green-800">Capital Humain</span>,
+              100 % gabonaise, conçue pour transformer votre organisation en un
+              modèle de performance et d’agilité.
+            </p>
+
             <div
               class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center"
             >
@@ -229,16 +245,19 @@
           </div>
 
           <!-- Contenu à droite -->
-          <div class="space-y-8 text-center lg:text-center sm:text-left md:text-left">
+          <div
+            class="space-y-8 text-center lg:text-center sm:text-left md:text-left"
+          >
             <div>
               <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                CNXOne HCM<sup>&#174;</sup> est une solution RH de nouvelle génération
+                CNXOne HCM<sup>&#174;</sup> est une solution RH de nouvelle
+                génération
               </h2>
               <p class="text-lg lg:text-xl text-gray-600">
-                Modulaire, intelligente et 100 % cloud, CNXOne HCM conjugue 
-                innovation technologique, sécurité et conformité réglementaire 
-                pour unifier tous vos processus RH, façonner une expérience 
-                collaborateur cohérente et faire du capital humain un levier 
+                Modulaire, intelligente et 100 % cloud, CNXOne HCM conjugue
+                innovation technologique, sécurité et conformité réglementaire
+                pour unifier tous vos processus RH, façonner une expérience
+                collaborateur cohérente et faire du capital humain un levier
                 d’excellence organisationnelle
               </p>
             </div>
@@ -259,7 +278,9 @@
                     Modulaire, intelligente et 100 % cloud
                   </h3>
                   <p class="text-gray-600 text-sm">
-                    Automatisez vos processus RH grâce à l'IA et gagnez en efficacité sur les tâches administratives dans une architecture modulaire, évolutive et entièrement cloud
+                    Automatisez vos processus RH grâce à l'IA et gagnez en
+                    efficacité sur les tâches administratives dans une
+                    architecture modulaire, évolutive et entièrement cloud
                   </p>
                 </div>
               </div>
@@ -278,7 +299,8 @@
                     Innovation technologique
                   </h3>
                   <p class="text-gray-600 text-sm">
-                    Exploitez tout le potentiel des technologies RH les plus avancées, via une interface intuitive et fluide.
+                    Exploitez tout le potentiel des technologies RH les plus
+                    avancées, via une interface intuitive et fluide.
                   </p>
                 </div>
               </div>
@@ -297,7 +319,9 @@
                     Conformité et sécurité des données
                   </h3>
                   <p class="text-gray-600 text-sm">
-                    Assurez la conformité aux réglementations gabonaises tout en garantissant une protection optimale de vos données sensibles.
+                    Assurez la conformité aux réglementations gabonaises tout en
+                    garantissant une protection optimale de vos données
+                    sensibles.
                   </p>
                 </div>
               </div>
@@ -311,17 +335,15 @@
     <section id="parcours" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h2
-            class="text-4xl font-bold text-gray-900 mb-6"
-          >
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
             La transformation RH en action
           </h2>
           <p
             class="text-lg md:text-xl lg:text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Explorez comment notre solution CNXOne HCM<sup>&#174;</sup> accompagne chaque étape du
-            parcours employé, de l'attraction des talents à leur développement
-            et fidélisation.
+            Explorez comment notre solution CNXOne HCM<sup>&#174;</sup>
+            accompagne chaque étape du parcours employé, de l'attraction des
+            talents à leur développement et fidélisation.
           </p>
         </div>
 
@@ -335,7 +357,8 @@
             onclick="showStep(1)"
             id="step-1"
           >
-            <i class="fas fa-search mr-1"></i>1. Sourcing & Acquisition
+            <i class="fas fa-search mr-1"></i>1. Identification & Acquisition
+            des talents
           </button>
           <button
             class="step-button px-3 py-2 rounded-full transition-all text-xs w-full md:w-auto"
@@ -356,7 +379,7 @@
             onclick="showStep(4)"
             id="step-4"
           >
-            <i class="fas fa-arrow-up mr-1"></i>4. Développement de Carrière
+            <i class="fas fa-arrow-up mr-1"></i>4. Développement des employés
           </button>
           <button
             class="step-button px-3 py-2 rounded-full transition-all text-xs w-full md:w-auto"
@@ -369,18 +392,17 @@
 
         <!-- Step Content -->
         <div class="max-w-6xl mx-auto">
-
           <!-- Step 1 Content -->
           <div id="content-1" class="step-content active">
             <div class="bg-gray-50 rounded-2xl p-2 sm:p-4 md:p-8">
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
-                Sourcing & Acquisition des Talents
+                Identification & Acquisition des Talents
               </h3>
-              <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 md:text-sm lg:text-sm"
+              >
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -391,15 +413,13 @@
                         Définition du Besoin
                       </h4>
                       <p class="text-gray-600">
-                        Création digitale des fiches de poste avec critères
-                        d'évaluation et validation workflow.
+                        Spécification des profils alignés aux objectifs
+                        stratégiques.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -410,15 +430,13 @@
                         Sourcing Multi-canal
                       </h4>
                       <p class="text-gray-600">
-                        Diffusion automatique sur jobboards, réseaux sociaux et
-                        cooptation interne.
+                        Recherche multicanale pour maximiser diversité et
+                        qualité.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -429,17 +447,12 @@
                         Présélection Intelligente
                       </h4>
                       <p class="text-gray-600">
-                        Filtres automatiques et scoring des candidatures selon
-                        vos critères.
+                        IA pour filtrer, scorer et prioriser les candidatures.
                       </p>
                     </div>
                   </div>
-                </div>
 
-                <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -450,15 +463,14 @@
                         Gestion des Entretiens
                       </h4>
                       <p class="text-gray-600">
-                        Planification automatique et grilles d'évaluation
-                        standardisées.
+                        Planification centralisée avec scoring et validation.
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                <div class="space-y-6">
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -469,24 +481,80 @@
                         Décision & Proposition
                       </h4>
                       <p class="text-gray-600">
-                        Processus de décision collaboratif et génération
-                        automatique d'offres.
+                        Consolidation des retours et génération équitable des
+                        offres.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-clipboard-list cnx-green"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Journal d'activité</h4>
+                      <p class="text-gray-600">
+                        Suivi des actions et étapes du recrutement en temps
+                        réel.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-chart-line cnx-green"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">
+                        Rapport de recrutement
+                      </h4>
+                      <p class="text-gray-600">
+                        Génération de rapports sur la performance du processus.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-envelope-open-text cnx-green"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">
+                        Modèles d'e-mails personnalisés
+                      </h4>
+                      <p class="text-gray-600">
+                        Création et envoi d’e-mails adaptés à chaque étape du
+                        processus.
                       </p>
                     </div>
                   </div>
 
                   <div class="bg-green-50 p-4 rounded-lg">
                     <h5 class="font-semibold text-green-800 mb-2">
-                      Fonctionnalités CNXOne HCM  impliqués:
+                      Mots-clés CNXOne HCM :
                     </h5>
                     <div class="flex flex-wrap gap-2">
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Recrutement & Intégration</span
+                        >Recrutement</span
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Référentiel RH</span
+                        >Candidatures</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Processus</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Décision</span
                       >
                     </div>
                   </div>
@@ -501,11 +569,11 @@
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
                 Intégration & Socialisation
               </h3>
-              <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:text-sm md:text-sm"
+              >
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -522,9 +590,7 @@
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -541,9 +607,7 @@
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -560,18 +624,14 @@
                 </div>
 
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
                       <i class="fas fa-graduation-cap cnx-green"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Formation Initiale
-                      </h4>
+                      <h4 class="font-semibold text-lg">Formation Initiale</h4>
                       <p class="text-gray-600">
                         Modules de formation obligatoires et spécifiques au
                         poste.
@@ -579,18 +639,14 @@
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
                       <i class="fas fa-comments cnx-green"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Suivi & Feedback
-                      </h4>
+                      <h4 class="font-semibold text-lg">Suivi & Feedback</h4>
                       <p class="text-gray-600">
                         Points d'étape réguliers et collecte de feedback sur
                         l'intégration.
@@ -598,14 +654,35 @@
                     </div>
                   </div>
 
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-file-alt cnx-green"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">
+                        Fiche de poste / mission
+                      </h4>
+                      <p class="text-gray-600">
+                        Clarification des attentes et rattachement au profil du
+                        collaborateur.
+                      </p>
+                    </div>
+                  </div>
+
                   <div class="bg-green-50 p-4 rounded-lg">
                     <h5 class="font-semibold text-green-800 mb-2">
-                      Fonctionnalités CNXOne HCM  impliqués:
+                      Mots-clés CNXOne HCM :
                     </h5>
                     <div class="flex flex-wrap gap-2">
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Intégration</span
+                        >Parcours</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Socialisation</span
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
@@ -613,7 +690,7 @@
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Gestion Administrative</span
+                        >Fiche de poste</span
                       >
                     </div>
                   </div>
@@ -628,121 +705,152 @@
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
                 Engagement & Performance
               </h3>
-              <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:text-sm md:text-sm"
+              >
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-users-gear cnx-green"></i>
+                      <i class="fas fa-network-wired text-green-600"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Force de Travail
-                      </h4>
+                      <h4 class="font-semibold text-lg">Force de Travail</h4>
                       <p class="text-gray-600">
-                        Gestion optimisée des effectifs, du temps de travail et
-                        des compétences pour une productivité maximale.
+                        Analyse intelligente de la main-d'œuvre, prévision des
+                        besoins RH et allocation optimisée des ressources.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-ship cnx-green"></i>
+                      <i class="fas fa-plane-departure text-green-600"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Fixation d'Objectifs
-                      </h4>
+                      <h4 class="font-semibold text-lg">Gestion des congés</h4>
                       <p class="text-gray-600">
-                        Définition d'objectifs SMART alignés sur la stratégie
-                        entreprise.
+                        Suivi automatisé des absences, politiques flexibles,
+                        synchronisation des calendriers et archivage sécurisé.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-chart-line cnx-green"></i>
+                      <i class="fas fa-calendar-check text-green-600"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Présences & Temps</h4>
+                      <p class="text-gray-600">
+                        Suivi des horaires, heures supplémentaires, conformité
+                        légale et rapports en temps réel.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-bullseye text-green-600"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Objectifs & KPIs</h4>
+                      <p class="text-gray-600">
+                        Définition collaborative d’objectifs SMART/OKR alignés
+                        sur la stratégie de l’entreprise.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-chart-line text-green-600"></i>
                     </div>
                     <div>
                       <h4 class="font-semibold text-lg">
-                        Suivi Performance
+                        Suivi de Performance
                       </h4>
                       <p class="text-gray-600">
-                        Tableaux de bord temps réel et indicateurs de
-                        performance clés.
+                        Suivi en continu des résultats, détection des écarts et
+                        actions correctives avec alertes.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-heart cnx-green"></i>
+                      <i class="fas fa-heartbeat text-green-600"></i>
                     </div>
                     <div>
                       <h4 class="font-semibold text-lg">Engagement</h4>
                       <p class="text-gray-600">
-                        Mesure du niveau d'engagement et plans d'action
-                        personnalisés.
+                        Mesurez l’engagement via des sondages eNPS et agissez
+                        pour renforcer la motivation.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-star cnx-green"></i>
-                    </div>
-                    <div>
-                      <h4 class="font-semibold text-lg">Évaluations</h4>
-                      <p class="text-gray-600">
-                        Entretiens annuels et évaluations 360° digitalisées.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
-                    <div
-                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
-                    >
-                      <i class="fas fa-gift cnx-green"></i>
+                      <i class="fas fa-award text-green-600"></i>
                     </div>
                     <div>
                       <h4 class="font-semibold text-lg">Reconnaissance</h4>
                       <p class="text-gray-600">
-                        Système de reconnaissance incluant politique de
-                        rémunération, gestion des notes de frais et récompenses
-                        personnalisées, intégré à la paie.
+                        Valorisez les contributions par des programmes formels
+                        et informels de reconnaissance.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-star text-green-600"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Évaluations</h4>
+                      <p class="text-gray-600">
+                        Auto-évaluation, évaluation par les pairs et feedback
+                        manager pour un suivi objectif.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row items-center gap-3 w-full">
+                    <div
+                      class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-handshake text-green-600"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg">Dialogue Social</h4>
+                      <p class="text-gray-600">
+                        Gestion des IRP, élections, indicateurs sociaux,
+                        enquêtes et reporting automatisé.
                       </p>
                     </div>
                   </div>
 
                   <div class="bg-green-50 p-4 rounded-lg">
                     <h5 class="font-semibold text-green-800 mb-2">
-                      Fonctionnalités CNXOne HCM  impliqués:
+                      Mots-clés CNXOne HCM :
                     </h5>
                     <div class="flex flex-wrap gap-2">
                       <span
@@ -751,7 +859,7 @@
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Évaluations</span
+                        >Objectifs</span
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
@@ -759,7 +867,11 @@
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Gestion Paie</span
+                        >Présences</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Dialogue social</span
                       >
                     </div>
                   </div>
@@ -772,112 +884,100 @@
           <div id="content-4" class="step-content">
             <div class="bg-gray-50 rounded-2xl p-2 sm:p-4 md:p-8">
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
-                Développement de Carrière
+                Développement des employés
               </h3>
-              <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:text-sm md:text-sm"
+              >
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-map cnx-green"></i>
+                      <i class="fas fa-brain text-green-600"></i>
                     </div>
                     <div>
                       <h4 class="font-semibold text-lg">
-                        Plans de Carrière
+                        Gestion des Compétences (GPEC)
                       </h4>
                       <p class="text-gray-600">
-                        Cartographie des parcours possibles et compétences
-                        requises.
+                        Cartographiez, évaluez et développez les compétences en
+                        lien avec les besoins stratégiques de l’entreprise.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-puzzle-piece cnx-green"></i>
+                      <i class="fas fa-chalkboard-teacher text-green-600"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Gestion des Compétences
-                      </h4>
+                      <h4 class="font-semibold text-lg">Formation Continue</h4>
                       <p class="text-gray-600">
-                        Référentiel de compétences et évaluation des gaps.
+                        Gérez un catalogue de formations en ligne ou en
+                        présentiel avec suivi du budget, des participants et des
+                        résultats.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-graduation-cap cnx-green"></i>
+                      <i class="fas fa-road text-green-600"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Formation Continue
-                      </h4>
+                      <h4 class="font-semibold text-lg">Plans de Carrière</h4>
                       <p class="text-gray-600">
-                        Catalogue de formations et parcours personnalisés.
+                        Aidez les collaborateurs à visualiser leur évolution
+                        professionnelle et les étapes clés à franchir.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-exchange-alt cnx-green"></i>
+                      <i class="fas fa-random text-green-600"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Mobilité Interne
-                      </h4>
+                      <h4 class="font-semibold text-lg">Mobilité Interne</h4>
                       <p class="text-gray-600">
-                        Opportunités internes et matching automatique
-                        profil-poste.
+                        Mettez en place un processus transparent pour postuler
+                        aux opportunités internes et favoriser la fidélisation.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
-                      <i class="fas fa-user-tie cnx-green"></i>
+                      <i class="fas fa-user-shield text-green-600"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Succession Planning
-                      </h4>
+                      <h4 class="font-semibold text-lg">Plan de Succession</h4>
                       <p class="text-gray-600">
-                        Identification et préparation des successeurs clés.
+                        Identifiez et préparez les talents pour les postes clés,
+                        assurant la continuité des activités à long terme.
                       </p>
                     </div>
                   </div>
 
                   <div class="bg-green-50 p-4 rounded-lg">
                     <h5 class="font-semibold text-green-800 mb-2">
-                      Fonctionnalités CNXOne HCM  impliqués:
+                      Mots-clés CNXOne HCM :
                     </h5>
                     <div class="flex flex-wrap gap-2">
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Carrières & Talents</span
+                        >Compétences</span
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
@@ -885,7 +985,15 @@
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >GPEC</span
+                        >Carrière</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Mobilité</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Succession</span
                       >
                     </div>
                   </div>
@@ -900,11 +1008,11 @@
               <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
                 Transition & Départ
               </h3>
-              <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:text-sm md:text-sm"
+              >
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -915,14 +1023,14 @@
                         Préparation de Départ
                       </h4>
                       <p class="text-gray-600">
-                        Gestion des préavis et planification de la transition.
+                        Checklist des actions à réaliser avant le départ d'un
+                        employé, comme la restitution du matériel ou la clôture
+                        des comptes et initialiser le et workflow de Départ.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -933,34 +1041,31 @@
                         Transfert de Connaissances
                       </h4>
                       <p class="text-gray-600">
-                        Documentation et transmission des savoirs critiques.
+                        Processus structuré pour documenter et transmettre les
+                        savoirs critiques à l'équipe ou au successeur.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
                       <i class="fas fa-comments cnx-green"></i>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-lg">
-                        Entretien de Sortie
-                      </h4>
+                      <h4 class="font-semibold text-lg">Entretien de Sortie</h4>
                       <p class="text-gray-600">
-                        Collecte de feedback et analyse des motifs de départ.
+                        Entretien confidentiel pour recueillir le feedback de
+                        l'employé sur son expérience et identifier des axes
+                        d'amélioration.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div class="space-y-6">
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -971,14 +1076,14 @@
                         Formalités Administratives
                       </h4>
                       <p class="text-gray-600">
-                        Génération automatique des documents de fin de contrat.
+                        Gestion des documents légaux et administratifs liés au
+                        départ, comme le solde de tout compte ou le certificat
+                        de travail.
                       </p>
                     </div>
                   </div>
 
-                  <div
-                    class="flex flex-row items-center gap-3 w-full"
-                  >
+                  <div class="flex flex-row items-center gap-3 w-full">
                     <div
                       class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"
                     >
@@ -987,24 +1092,35 @@
                     <div>
                       <h4 class="font-semibold text-lg">Réseau Alumni</h4>
                       <p class="text-gray-600">
-                        Maintien du lien avec les anciens employés.
+                        Plateforme pour maintenir le contact avec les anciens
+                        employés, favorisant le networking et les opportunités
+                        futures.
                       </p>
                     </div>
                   </div>
 
                   <div class="bg-green-50 p-4 rounded-lg">
                     <h5 class="font-semibold text-green-800 mb-2">
-                      Fonctionnalités CNXOne HCM  impliqués:
+                      Mots-clés CNXOne HCM:
                     </h5>
                     <div class="flex flex-wrap gap-2">
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Gestion Administrative</span
+                        >Départ</span
                       >
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
-                        >Documentation</span
+                        >Connaissances</span
                       >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Sortie</span
+                      >
+                      <span
+                        class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >Formalités</span
+                      >
+
                       <span
                         class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm"
                         >Alumni</span
@@ -1015,16 +1131,12 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- Information paie -->
-    <section
-      id="information-paie"
-      class="py-20 px-4 sm:px-6 lg:px-8 bg-red-50"
-    >
+    <section id="information-paie" class="py-20 px-4 sm:px-6 lg:px-8 bg-red-50">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-8">
@@ -1072,7 +1184,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-900 mb-6">
-            Modules transversaux CNXOne HCM<sup>&#174;</sup> 
+            Modules transversaux CNXOne HCM<sup>&#174;</sup>
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             Notre solution complète s'appuie sur des modules transversaux qui
@@ -1094,64 +1206,136 @@
           </div>
 
           <!-- Surrounding Modules -->
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 mb-12 px-2 sm:px-0">
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 px-2 sm:px-0"
+          >
+            <!-- Analyses Décisionnelles -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('analyses')"
             >
-              <i class="fas fa-chart-bar text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
-              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
+              <i
+                class="fas fa-chart-bar text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
                 Analyses Décisionnelles
               </h4>
             </div>
 
+            <!-- Gestion des Risques -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('risques')"
             >
-              <i class="fas fa-shield-alt text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
-              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
+              <i
+                class="fas fa-shield-alt text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
                 Gestion des Risques
               </h4>
             </div>
 
+            <!-- Sécurité & Confidentialité -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('securite')"
             >
-              <i class="fas fa-lock text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
-              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
+              <i
+                class="fas fa-lock text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
                 Sécurité & Confidentialité
               </h4>
             </div>
 
+            <!-- Interfaçage Systèmes -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('interfacage')"
             >
-              <i class="fas fa-link text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
-              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
+              <i
+                class="fas fa-link text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
                 Interfaçage Systèmes
               </h4>
             </div>
 
+            <!-- Conformité Légale -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
               onclick="showModuleDescription('conformite')"
             >
-              <i class="fas fa-balance-scale text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"></i>
-              <h4 class="text-center text-xs sm:text-sm font-semibold leading-tight">
+              <i
+                class="fas fa-balance-scale text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
                 Conformité Légale
+              </h4>
+            </div>
+
+            <!-- Gestion des Informations des Employés -->
+            <div
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
+              onclick="showModuleDescription('infos_employes')"
+            >
+              <i
+                class="fas fa-id-card text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
+                Gestion Informations Employés
+              </h4>
+            </div>
+
+            <!-- Gestion des Documents -->
+            <div
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
+              onclick="showModuleDescription('documents')"
+            >
+              <i
+                class="fas fa-file-alt text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
+                Gestion Documents
+              </h4>
+            </div>
+
+            <!-- Exigences Non Fonctionnelles -->
+            <div
+              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
+              onclick="showModuleDescription('exigences_non_fonc')"
+            >
+              <i
+                class="fas fa-cogs text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+              ></i>
+              <h4
+                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+              >
+                Exigences Non Fonc.
               </h4>
             </div>
           </div>
 
           <!-- Module Descriptions -->
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-4xl lg:max-w-full md:w-4xl mx-auto">
             <!-- Analyses Décisionnelles -->
             <div
               id="module-analyses"
-              class="module-description bg-white p-8 rounded-xl shadow-lg"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
                 Analyses Décisionnelles
@@ -1247,7 +1431,7 @@
             <!-- Gestion des Risques -->
             <div
               id="module-risques"
-              class="module-description bg-white p-8 rounded-xl shadow-lg"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
                 Gestion des Risques
@@ -1336,7 +1520,7 @@
             <!-- Sécurité & Confidentialité -->
             <div
               id="module-securite"
-              class="module-description active bg-white p-8 rounded-xl shadow-lg"
+              class="module-description active bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
                 Sécurité & Confidentialité
@@ -1423,9 +1607,10 @@
               </div>
             </div>
 
+            <!-- Interfaçage Systèmes -->
             <div
               id="module-interfacage"
-              class="module-description bg-white p-8 rounded-xl shadow-lg"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
                 Interfaçage Systèmes
@@ -1511,9 +1696,10 @@
               </div>
             </div>
 
+            <!-- Conformité Légale -->
             <div
               id="module-conformite"
-              class="module-description bg-white p-8 rounded-xl shadow-lg"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
                 Conformité Légale
@@ -1598,6 +1784,328 @@
                 </div>
               </div>
             </div>
+
+            <!-- Gestion des Informations des Employés -->
+            <div
+              id="module-infos_employes"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
+            >
+              <h3 class="text-2xl font-bold cnx-green mb-4">
+                Gestion des Informations des Employés
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Centralisez et sécurisez toutes les données de vos
+                collaborateurs, des informations personnelles aux documents
+                contractuels, pour une gestion administrative simplifiée et une
+                meilleure vision d'ensemble.
+              </p>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-semibold mb-2 cnx-green">
+                    Fonctionnalités clés:
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Profil numérique complet des employés</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Organigramme fonctionnel et interactif</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Portail employé personnalisable</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Gestion fine des profils et autorisations</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-2 cnx-green">Bénéfices:</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Données centralisées, sécurisées et facilement
+                        accessibles</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Vision claire et à jour de la structure
+                        organisationnelle</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Autonomie et expérience employé améliorées</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Conformité et confidentialité des données
+                        renforcées</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gestion des Documents -->
+            <div
+              id="module-documents"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
+            >
+              <h3 class="text-2xl font-bold cnx-green mb-4">
+                Gestion des Documents
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Simplifiez la gestion de tous vos documents RH, des contrats aux
+                attestations, grâce à une plateforme centralisée, sécurisée et
+                facile d'accès, avec des fonctionnalités d'archivage, de
+                recherche et de partage avancées.
+              </p>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-semibold mb-2 cnx-green">
+                    Fonctionnalités clés:
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Centralisation des documents (réglementaires,
+                        entreprise, employés)</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Modèles de documents personnalisables et génération
+                        facile</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Suivi des dates d'expiration avec notifications</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Signature électronique intégrée (E-signature)</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-2 cnx-green">Bénéfices:</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Accès rapide, sécurisé et centralisé à tous les
+                        documents</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Optimisation des processus administratifs et gain de
+                        temps</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Conformité assurée et réduction des risques liés aux
+                        échéances</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Dématérialisation et réduction de l'usage du
+                        papier</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Exigences Non Fonctionnelles -->
+            <div
+              id="module-exigences_non_fonc"
+              class="module-description bg-white p-8 rounded-xl shadow-sm"
+            >
+              <h3 class="text-2xl font-bold cnx-green mb-4">
+                Exigences Non Fonctionnelles
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Assurez la pérennité et la performance de votre solution RH
+                grâce à une architecture solide, des protocoles de sécurité
+                stricts, et une maintenabilité exemplaire, garantissant une
+                expérience utilisateur optimale et une conformité continue.
+              </p>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-semibold mb-2 cnx-green">
+                    Fonctionnalités clés:
+                  </h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Sécurité et confidentialité des données de premier
+                        ordre</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Haute performance et fiabilité du système</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Architecture moderne et API REST robustes pour
+                        l'intégration</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Mises à jour continues et conformité réglementaire
+                        assurée</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-2 cnx-green">Bénéfices:</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Protection optimale des données sensibles et intégrité
+                        du système</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Expérience utilisateur fluide et disponibilité
+                        constante des services</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Interopérabilité facilitée et évolutivité de la
+                        solution</span
+                      >
+                    </li>
+                    <li class="flex items-center">
+                      <span
+                        class="bg-cnx-green text-white rounded-full flex items-center justify-center w-6 h-6 mr-3 shadow-md"
+                        ><i class="fas fa-check text-xs"></i
+                      ></span>
+                      <span class="text-gray-700"
+                        >Système toujours à jour, sécurisé et conforme aux
+                        dernières normes</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1607,16 +2115,22 @@
     <section id="benefices" class="py-20 px-4 sm:px-6 lg:px-8 degrader">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Les bénéfices clés de CNXOne HCM<sup>&#174;</sup> 
+          <h2
+            class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-6"
+          >
+            Les bénéfices clés de CNXOne HCM<sup>&#174;</sup>
           </h2>
-          <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p
+            class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
+          >
             Notre solution apporte une valeur ajoutée significative à chaque
             niveau de l'organisation, de l'employé aux dirigeants.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12"
+        >
           <!-- Pour les Employés -->
           <div
             class="text-center bg-white p-4 sm:p-6 rounded-xl shadow-lg card-hover"
@@ -1744,8 +2258,12 @@
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-8">
-          <h2 class="text-4xl lg:text-2xl font-bold text-gray-900">Se lancer ?</h2>
-          <p class="text-gray-600 mt-2">Nous sommes là pour vous accompagner à chaque étape.</p>
+          <h2 class="text-4xl lg:text-2xl font-bold text-gray-900">
+            Se lancer ?
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Nous sommes là pour vous accompagner à chaque étape.
+          </p>
         </div>
         <div class="flex flex-wrap justify-center gap-3">
           <span
@@ -1799,9 +2317,9 @@
           Prêt à transformer votre capital humain ?
         </h2>
         <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-          Le CNXOne HCM<sup>&#174;</sup>  accompagne la transformation RH de votre entreprise,
-          positionnant la fonction Capital Humain comme un véritable partenaire
-          stratégique.
+          Le CNXOne HCM<sup>&#174;</sup> accompagne la transformation RH de
+          votre entreprise, positionnant la fonction Capital Humain comme un
+          véritable partenaire stratégique.
         </p>
         <div
           class="flex flex-col md:flex-row gap-8 justify-between items-center mt-12"
@@ -1823,10 +2341,12 @@
             <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
               <a
                 href="tel:+241076402886"
-                class="flex items-center  text-gray-600 hover:text-green-800 transition-colors"
+                class="flex items-center text-gray-600 hover:text-green-800 transition-colors"
               >
                 <i class="fas fa-phone text-green-800 mr-2"></i>
-                <span class="text-xs lg:text-base md:text-base">+241 076402886</span>
+                <span class="text-xs lg:text-base md:text-base"
+                  >+241 076402886</span
+                >
               </a>
               <a
                 href="mailto:support@cnx4-0.com"
@@ -1874,11 +2394,15 @@
     <footer class="bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 text-white">
       <div class="max-w-7xl mx-auto">
         <!-- Grid principal du footer -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 text-center md:text-left"
+        >
           <!-- Logo et description -->
-          <div class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center md:items-start">
+          <div
+            class="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center md:items-start"
+          >
             <a href="https://cnxlink.cnx4-0.com" class="inline-block mb-4">
-              <img src="./img/logo_1.png" class="w-32" alt="">
+              <img src="./img/logo_1.png" class="w-32" alt="" />
               <!-- <p class="text-3xl font-bold">
                 <span class="text-gray-400">CNX <span class="text-green-800">4.</span></span
                 ><span class="text-gray-400">0</span>
@@ -1931,7 +2455,9 @@
           <div class="lg:pl-4 flex flex-col items-center md:items-start">
             <h4 class="text-lg font-semibold mb-4 text-white">Localisation</h4>
             <div class="text-gray-400">
-              <div class="flex flex-col items-center md:items-start md:flex-row md:space-x-3">
+              <div
+                class="flex flex-col items-center md:items-start md:flex-row md:space-x-3"
+              >
                 <i class="fas fa-map-marker-alt mt-1"></i>
                 <p class="leading-relaxed text-center md:text-left">
                   Ancienne Sobraga, Immeuble La Vénézienne, Rez de Chaussée,
@@ -1955,7 +2481,9 @@
           <p class="text-gray-400 text-sm ml text-center md:text-left">
             CNXOne HCM<sup>&#174;</sup> by Eden Technology.
           </p>
-          <div class="flex flex-col items-center space-y-3 md:flex-row md:space-y-0 md:space-x-6">
+          <div
+            class="flex flex-col items-center space-y-3 md:flex-row md:space-y-0 md:space-x-6"
+          >
             <a
               href="#"
               class="text-sm text-gray-400 hover:text-green-400 transition-colors"
@@ -1978,19 +2506,36 @@
       </div>
 
       <!-- Chatbot Panel (Choice) -->
-      <div id="chatbot-panel" class="fixed bottom-24 right-8 w-80 bg-white rounded-lg shadow-xl z-50 flex flex-col" style="display:none; max-height:320px;">
-        <button onclick="openChatbotInterface()" class="flex items-center gap-2 px-4 py-4 text-cnx-green font-semibold text-sm hover:bg-green-100 border-b border-gray-200">
-          <i class="fas fa-comments text-green-800 text-sm"></i> Discuter maintenant
+      <div
+        id="chatbot-panel"
+        class="fixed bottom-24 right-8 w-80 bg-white rounded-lg hover:rounded-lg shadow-xl z-50 flex flex-col"
+        style="display: none; max-height: 320px"
+      >
+        <button
+          onclick="openChatbotInterface()"
+          class="flex items-center gap-2 px-4 py-4 text-cnx-green font-semibold text-sm hover:bg-green-100 border-b border-gray-200"
+        >
+          <i class="fas fa-comments text-green-800 text-sm"></i> Discuter
+          maintenant
         </button>
         <div class="flex items-center gap-2 px-4 py-4 hover:bg-green-100">
           <i class="fas fa-phone-alt text-green-800 text-sm"></i>
           <div>
-            <div class="text-gray-700 font-medium text-sm">Appeler l'équipe commerciale</div>
-            <a href="tel:+241076402886" class="text-sm font-bold text-gray-900 block">+241 076402886</a>
+            <div class="text-gray-700 font-medium text-sm">
+              Appeler l'équipe commerciale
+            </div>
+            <a
+              href="tel:+241076402886"
+              class="text-sm font-bold text-gray-900 block"
+              >+241 076402886</a
+            >
             <!-- <a href="#" class="text-xs text-blue-600 underline">Liste complète des numéros de téléphone par pays</a> -->
           </div>
         </div>
-        <button onclick="closeChatbotPanel()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700">
+        <button
+          onclick="closeChatbotPanel()"
+          class="absolute top-2 right-2 text-gray-400 hover:text-gray-700"
+        >
           <i class="fas fa-times"></i>
         </button>
       </div>
@@ -1999,13 +2544,13 @@
       <div
         id="chatbot-interface"
         class="fixed bottom-24 right-8 w-80 bg-white rounded-lg shadow-xl z-50 hidden max-h-[80vh] flex flex-col"
-        style="top: 80px;"
+        style="top: 80px"
       >
         <!-- Header -->
         <div class="p-3 border-b border-gray-200">
           <div class="flex justify-between items-center">
             <h3 class="text-base font-semibold text-gray-800">
-              CNXOne HCM<sup>&#174;</sup> 
+              CNXOne HCM<sup>&#174;</sup>
             </h3>
             <button onclick="toggleChatbot()" class="focus:outline-none">
               <i class="fas fa-times"></i>
@@ -2030,7 +2575,10 @@
             </div>
             <div class="ml-2 bg-gray-100 rounded-lg p-2 max-w-[85%]">
               <p class="text-xs text-gray-800 leading-snug">
-                Bonjour ! Je suis votre assistant virtuel CNXOne HCM<sup>&#174;</sup> . 👋<br />
+                Bonjour ! Je suis votre assistant virtuel CNXOne HCM<sup
+                  >&#174;</sup
+                >
+                . 👋<br />
                 Comment puis-je vous aider aujourd'hui ?
               </p>
             </div>
@@ -2043,7 +2591,8 @@
             onclick="handleQuickAction('features')"
             class="w-full text-left p-2 rounded font-semibold hover:bg-gray-100 transition-colors text-base"
           >
-            <i class="fas fa-list-ul mr-2 text-cnx-green"></i> Liste des fonctionnalités
+            <i class="fas fa-list-ul mr-2 text-cnx-green"></i> Liste des
+            fonctionnalités
           </button>
           <button
             onclick="handleQuickAction('demo')"
@@ -2102,9 +2651,9 @@
           <div class="p-6">
             <div class="mb-6">
               <p class="text-gray-700 mb-4">
-                Découvrez comment notre solution CNXOne HCM<sup>&#174;</sup> peut répondre à vos besoins
-                spécifiques. Choisissez un créneau qui vous convient pour une
-                démonstration personnalisée.
+                Découvrez comment notre solution CNXOne HCM<sup>&#174;</sup>
+                peut répondre à vos besoins spécifiques. Choisissez un créneau
+                qui vous convient pour une démonstration personnalisée.
               </p>
             </div>
 
@@ -2237,7 +2786,9 @@
                 <label class="block text-sm font-medium text-gray-700 mb-1"
                   >Créneaux disponibles</label
                 >
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12"
+                >
                   <button
                     type="button"
                     class="time-slot px-3 py-2 border border-gray-300 rounded-md hover:bg-green-50 hover:border-green-500 focus:outline-none"
@@ -2361,22 +2912,41 @@
     </div>
 
     <script>
+      // Responsive navbar burger menu
+      const burger = document.getElementById("navbar-burger");
+      const mobileMenu = document.getElementById("navbar-mobile-menu");
+      const closeBtn = document.getElementById("navbar-close");
+
+      if (burger && mobileMenu && closeBtn) {
+        burger.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+        });
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+        // Fermer le menu si on clique en dehors du menu mobile
+        mobileMenu.addEventListener("click", (e) => {
+          if (e.target === mobileMenu) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      }
       // Gestion du changement de style de la navbar au scroll
-      window.addEventListener('scroll', function() {
-        const nav = document.getElementById('main-nav');
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("main-nav");
         if (window.scrollY > 10) {
-          nav.classList.add('bg-white', 'shadow-lg');
-          nav.classList.remove('bg-transparent');
+          nav.classList.add("bg-white", "shadow-lg");
+          nav.classList.remove("bg-transparent");
         } else {
-          nav.classList.remove('bg-white', 'shadow-lg');
-          nav.classList.add('bg-transparent');
+          nav.classList.remove("bg-white", "shadow-lg");
+          nav.classList.add("bg-transparent");
         }
       });
 
       // Appliquer le style initial au chargement
-      document.addEventListener('DOMContentLoaded', function() {
-        const nav = document.getElementById('main-nav');
-        nav.classList.add('bg-transparent');
+      document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.getElementById("main-nav");
+        nav.classList.add("bg-transparent");
       });
 
       // Step Navigation
@@ -2778,27 +3348,6 @@
             }
           });
       });
-    </script>
-    <script>
-      // Responsive navbar burger menu
-      const burger = document.getElementById("navbar-burger");
-      const mobileMenu = document.getElementById("navbar-mobile-menu");
-      const closeBtn = document.getElementById("navbar-close");
-
-      if (burger && mobileMenu && closeBtn) {
-        burger.addEventListener("click", () => {
-          mobileMenu.classList.remove("hidden");
-        });
-        closeBtn.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-        // Fermer le menu si on clique en dehors du menu mobile
-        mobileMenu.addEventListener("click", (e) => {
-          if (e.target === mobileMenu) {
-            mobileMenu.classList.add("hidden");
-          }
-        });
-      }
     </script>
   </body>
 </html>
