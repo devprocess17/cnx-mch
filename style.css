@@ -126,7 +126,7 @@ body {
 
 .module-circle:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(74, 222, 128, 0.3);
 }
 
 .central-circle {
@@ -321,4 +321,24 @@ body {
   width: 70%; /* équivalent à w-96 */
   height: 80%; /* équivalent à h-80 */
   z-index: 10;
+}
+
+/* Style pour le module actif */
+.module-circle.active {
+  background-color: #1a5f2b; /* Vert foncé de CNX */
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.module-circle.active i,
+.module-circle.active h4,
+.module-circle.active .text-gray-700,
+.module-circle.active .text-gray-600 {
+  color: white !important;
+}
+
+/* Assurer que le texte dans les descriptions reste visible */
+.module-description.active .text-gray-700,
+.module-description.active .text-gray-600 {
+  color: #4b5563 !important; /* Couleur gris foncé pour le contenu */
 }

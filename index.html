@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav
       id="main-nav"
-      class="fixed w-full transition-all duration-300 top-0 z-50"
+      class="fixed w-full transition-all duration-300 top-0 z-50 px-4 lg:px-0"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -1142,7 +1142,7 @@
           <div class="space-y-8">
             <div class="text-center lg:text-left md:text-center">
               <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                CNX Paie : La solution intelligente de gestion de la paie
+                CNXOne Paie : La solution intelligente de gestion de la paie
               </h2>
               <p class="text-lg md:text-xl lg:text-xl text-gray-600">
                 Automatisez et sécurisez votre processus de paie avec une
@@ -1159,7 +1159,7 @@
                 class="bg-red-800 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-red-700 transition-colors duration-300"
               >
                 <i class="fas fa-play-circle mr-2"></i>
-                Découvrir CNX Paie
+                Découvrir CNXOne Paie
               </a>
             </div>
           </div>
@@ -1211,23 +1211,23 @@
           >
             <!-- Analyses Décisionnelles -->
             <div
-              class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('analyses')"
+              class="module-circle active bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-all"
+              onclick="showModuleDescription('analyses', event)"
             >
               <i
-                class="fas fa-chart-bar text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
+                class="fas fa-chart-bar text-xl sm:text-2xl text-white mb-1 sm:mb-2"
               ></i>
               <h4
-                class="text-center text-xs sm:text-sm font-semibold leading-tight"
+                class="text-center text-xs sm:text-sm font-semibold leading-tight text-white"
               >
-                Analyses Décisionnelles
+                Analyses décisionnelles
               </h4>
             </div>
 
             <!-- Gestion des Risques -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('risques')"
+              onclick="showModuleDescription('risques', event)"
             >
               <i
                 class="fas fa-shield-alt text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1235,14 +1235,14 @@
               <h4
                 class="text-center text-xs sm:text-sm font-semibold leading-tight"
               >
-                Gestion des Risques
+                Gestion des risques
               </h4>
             </div>
 
             <!-- Sécurité & Confidentialité -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('securite')"
+              onclick="showModuleDescription('securite', event)"
             >
               <i
                 class="fas fa-lock text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1257,7 +1257,7 @@
             <!-- Interfaçage Systèmes -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('interfacage')"
+              onclick="showModuleDescription('interfacage', event)"
             >
               <i
                 class="fas fa-link text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1265,14 +1265,14 @@
               <h4
                 class="text-center text-xs sm:text-sm font-semibold leading-tight"
               >
-                Interfaçage Systèmes
+                Interfaçage systèmes
               </h4>
             </div>
 
             <!-- Conformité Légale -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('conformite')"
+              onclick="showModuleDescription('conformite', event)"
             >
               <i
                 class="fas fa-balance-scale text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1280,14 +1280,14 @@
               <h4
                 class="text-center text-xs sm:text-sm font-semibold leading-tight"
               >
-                Conformité Légale
+                Conformité légale
               </h4>
             </div>
 
             <!-- Gestion des Informations des Employés -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('infos_employes')"
+              onclick="showModuleDescription('infos_employes', event)"
             >
               <i
                 class="fas fa-id-card text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1295,14 +1295,14 @@
               <h4
                 class="text-center text-xs sm:text-sm font-semibold leading-tight"
               >
-                Gestion Informations Employés
+                Gestion Informations employés
               </h4>
             </div>
 
             <!-- Gestion des Documents -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('documents')"
+              onclick="showModuleDescription('documents', event)"
             >
               <i
                 class="fas fa-file-alt text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1310,14 +1310,14 @@
               <h4
                 class="text-center text-xs sm:text-sm font-semibold leading-tight"
               >
-                Gestion Documents
+                Gestion des documents
               </h4>
             </div>
 
             <!-- Exigences Non Fonctionnelles -->
             <div
               class="module-circle bg-white w-full max-w-[140px] h-auto aspect-square rounded-full flex flex-col items-center justify-center shadow-lg cursor-pointer mx-auto p-3 hover:shadow-xl transition-shadow"
-              onclick="showModuleDescription('exigences_non_fonc')"
+              onclick="showModuleDescription('exigences_non_fonc', event)"
             >
               <i
                 class="fas fa-cogs text-xl sm:text-2xl cnx-green mb-1 sm:mb-2"
@@ -1325,7 +1325,7 @@
               <h4
                 class="text-center text-xs sm:text-sm font-semibold leading-tight"
               >
-                Support & fiabilité système
+                Support
               </h4>
             </div>
           </div>
@@ -1335,7 +1335,7 @@
             <!-- Analyses Décisionnelles -->
             <div
               id="module-analyses"
-              class="module-description bg-white p-8 rounded-xl shadow-sm"
+              class="module-description active bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
                 Analyses décisionnelles
@@ -2048,7 +2048,7 @@
               class="module-description bg-white p-8 rounded-xl shadow-sm"
             >
               <h3 class="text-2xl font-bold cnx-green mb-4">
-                Support & accompagnement
+                Support
               </h3>
               <p class="text-gray-600 mb-6">
                 Bénéficiez d'un accompagnement personnalisé et d'un support réactif pour optimiser l'utilisation de votre solution RH. Notre équipe dédiée vous assure une transition en douceur, une formation complète et un suivi continu pour maximiser votre satisfaction et votre réussite.
@@ -2134,7 +2134,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2
-            class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-6"
+            class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-6 lg:mb-6 leading-tight sm:leading-normal lg:leading-normal"
           >
             Les bénéfices clés de CNXOne HCM<sup>&#174;</sup>
           </h2>
@@ -2277,7 +2277,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-8">
           <h2 class="text-4xl lg:text-2xl font-bold text-gray-900">
-            Se lancer ?
+            Se lancer
           </h2>
           <p class="text-gray-600 mt-2">
             Nous sommes là pour vous accompagner à chaque étape.
@@ -2479,9 +2479,9 @@
                 class="flex flex-col items-center md:items-start md:flex-row md:space-x-3"
               >
                 <i class="fas fa-map-marker-alt mt-1"></i>
-                <p class="leading-relaxed text-center md:text-left">
+                <p class="leading-relaxed text-center text-base md:text-left">
                   Ancienne Sobraga, Immeuble La Vénézienne, Rez de Chaussée,
-                  Porte Gauche Libreville, GA
+                  Porte Gauche, Libreville, GA
                 </p>
               </div>
             </div>
@@ -2991,14 +2991,57 @@
       }
 
       // Module Descriptions
-      function showModuleDescription(moduleType) {
+      function showModuleDescription(moduleType, event = null) {
         // Hide all module descriptions
         document.querySelectorAll(".module-description").forEach((desc) => {
           desc.classList.remove("active");
         });
 
+        // Remove active class and reset colors from all module circles
+        document.querySelectorAll(".module-circle").forEach((circle) => {
+          circle.classList.remove("active");
+          // Reset icon color to green
+          const icon = circle.querySelector('i');
+          const title = circle.querySelector('h4');
+          if (icon) {
+            icon.classList.remove('text-white');
+            icon.classList.add('cnx-green');
+          }
+          if (title) {
+            title.classList.remove('text-white');
+            title.classList.add('text-gray-700');
+          }
+        });
+
         // Show selected module description
-        document.getElementById(`module-${moduleType}`).classList.add("active");
+        const moduleElement = document.getElementById(`module-${moduleType}`);
+        if (moduleElement) {
+          moduleElement.classList.add("active");
+        }
+        
+        // Add active class to clicked module circle
+        let targetCircle = null;
+        if (event && event.currentTarget) {
+          targetCircle = event.currentTarget;
+        } else {
+          // If called programmatically, find the corresponding circle
+          targetCircle = document.querySelector(`[onclick*="${moduleType}"]`);
+        }
+        
+        if (targetCircle) {
+          targetCircle.classList.add("active");
+          // Set active colors for icon and title
+          const icon = targetCircle.querySelector('i');
+          const title = targetCircle.querySelector('h4');
+          if (icon) {
+            icon.classList.remove('cnx-green');
+            icon.classList.add('text-white');
+          }
+          if (title) {
+            title.classList.remove('text-gray-700');
+            title.classList.add('text-white');
+          }
+        }
       }
 
       // Chatbot Panel/Interface Logic
@@ -3064,7 +3107,7 @@
             "app",
           ],
           responses: [
-            "CNXOne HCM  est une solution complète de gestion RH qui comprend :\n• Gestion des talents\n• Évaluation des performances\n• Formation et développement\n• Gestion administrative\n• Analyses et reporting\n\nQuel aspect vous intéresse le plus ?",
+            "CNXOne HCM est une solution Cloud de gestion du Capital Humain qui comprend :\n• Gestion des talents\n• Évaluation des performances\n• Formation et développement\n• Gestion administrative\n• Analyses et reporting\n\nQuel aspect vous intéresse le plus ?",
             "Notre solution s'adapte à tous les secteurs d'activité. Voulez-vous en savoir plus sur une fonctionnalité particulière ?",
           ],
         },
@@ -3267,7 +3310,12 @@
 
       // Initialize default module description
       document.addEventListener("DOMContentLoaded", function () {
-        showModuleDescription("securite");
+        // Activer le premier module par défaut
+        const firstModule = document.querySelector('.module-circle');
+        if (firstModule) {
+          firstModule.classList.add('active');
+        }
+        showModuleDescription("analyses");
       });
 
       // Modals
