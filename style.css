@@ -10,6 +10,17 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.bg-cover{
+  /* From Uiverse.io by muhammad_1180 */ 
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: radial-gradient(125% 125% at 50% 10%, #fff 40%, #41f586 100%);
+  z-index: -10;
+}
+
+
 .cnx-green {
   color: var(--cnx-green);
 }
@@ -37,7 +48,7 @@ body {
 }
 
 .degrader{
-  background: linear-gradient(to bottom left, rgb(90, 236, 241), rgb(255, 255, 255));
+  background: linear-gradient(to bottom left, rgb(173, 252, 255), rgb(255, 255, 255));
 }
 
 .cnxOne{
@@ -256,6 +267,62 @@ body {
 }
 
 /* Animations for the decorative shapes */
+/* Card Hover Effects */
+.card-hover-effect {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile/Tablet Toggle Button */
+.card-toggle-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: white;
+  color: #166534;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.card-toggle-btn:hover {
+  background: #f0fdf4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Card Content Transitions */
+.card-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hover-content {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-hover-content.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
